@@ -4,6 +4,7 @@
  <table class="table table-striped">
   <thead>
   <tr>
+    <th scope="col">ID</th>
     <th scope="col">Vorname</th>
     <th scope="col">Nachname</th>
     <th scope="col">Strasse</th>
@@ -19,6 +20,7 @@
  <tbody>
 {% for item in adresses %}
     <tr>    
+        <td>{{ item.getId() }}</td>
         <td>{{ item.getVorname() }}</td>
         <td>{{ item.getNachname() }}</td>
         <td>{{ item.getStrasse() }}</td>

@@ -58,7 +58,7 @@ class __TwigTemplate_5bc126bce03e6a24bd401c219241dc4267c55e4f26e3a5688aba45e0cc0
         // line 3
         echo "<br>
     <div class=\"offset-sm-1 offset-lg-3 col-sm-11 col-lg-5\">
-    <h3>Neu Adresse erstellen</3>
+    <h3>Neuen Eintrag erstellen</3>
     <br><br>
     ";
         // line 7
@@ -93,7 +93,7 @@ class __TwigTemplate_5bc126bce03e6a24bd401c219241dc4267c55e4f26e3a5688aba45e0cc0
 {% block body %}
 <br>
     <div class=\"offset-sm-1 offset-lg-3 col-sm-11 col-lg-5\">
-    <h3>Neu Adresse erstellen</3>
+    <h3>Neuen Eintrag erstellen</3>
     <br><br>
     {{ form(user_form) }}
     </div>

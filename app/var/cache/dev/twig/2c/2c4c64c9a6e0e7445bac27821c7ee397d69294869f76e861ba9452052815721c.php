@@ -60,6 +60,7 @@ class __TwigTemplate_7e4ac443606a5ebd20396cc1ec3b3be826ecae3f515b4a2e39f2ee8e248
  <table class=\"table table-striped\">
   <thead>
   <tr>
+    <th scope=\"col\">ID</th>
     <th scope=\"col\">Vorname</th>
     <th scope=\"col\">Nachname</th>
     <th scope=\"col\">Strasse</th>
@@ -74,51 +75,55 @@ class __TwigTemplate_7e4ac443606a5ebd20396cc1ec3b3be826ecae3f515b4a2e39f2ee8e248
 </thead>
  <tbody>
 ";
-        // line 20
+        // line 21
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["adresses"]) || array_key_exists("adresses", $context) ? $context["adresses"] : (function () { throw new RuntimeError('Variable "adresses" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["adresses"]) || array_key_exists("adresses", $context) ? $context["adresses"] : (function () { throw new RuntimeError('Variable "adresses" does not exist.', 21, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 21
+            // line 22
             echo "    <tr>    
         <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getVorname", [], "method", false, false, false, 22), "html", null, true);
-            echo "</td>
-        <td>";
             // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getNachname", [], "method", false, false, false, 23), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getId", [], "method", false, false, false, 23), "html", null, true);
             echo "</td>
         <td>";
             // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getStrasse", [], "method", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getVorname", [], "method", false, false, false, 24), "html", null, true);
             echo "</td>
         <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getHausnummer", [], "method", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getNachname", [], "method", false, false, false, 25), "html", null, true);
             echo "</td>
         <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getOrt", [], "method", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getStrasse", [], "method", false, false, false, 26), "html", null, true);
             echo "</td>
         <td>";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getPlz", [], "method", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getHausnummer", [], "method", false, false, false, 27), "html", null, true);
             echo "</td>
         <td>";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getTelefonnumer", [], "method", false, false, false, 28), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getOrt", [], "method", false, false, false, 28), "html", null, true);
             echo "</td>
         <td>";
             // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getEmailAdresse", [], "method", false, false, false, 29), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getPlz", [], "method", false, false, false, 29), "html", null, true);
+            echo "</td>
+        <td>";
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getTelefonnumer", [], "method", false, false, false, 30), "html", null, true);
+            echo "</td>
+        <td>";
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getEmailAdresse", [], "method", false, false, false, 31), "html", null, true);
             echo "</td>
         <td scope=\"row\"><a href=\"/edit/";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getId", [], "method", false, false, false, 30), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getId", [], "method", false, false, false, 32), "html", null, true);
             echo "\"><b style=\"color: green;\">Edit</b></a></td>
         <td scope=\"row\"><a href=\"/delete/";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getId", [], "method", false, false, false, 31), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getId", [], "method", false, false, false, 33), "html", null, true);
             echo "\"><b style=\"color: red;\">Delete</b></a></td>
     </tr>
 ";
@@ -126,7 +131,7 @@ class __TwigTemplate_7e4ac443606a5ebd20396cc1ec3b3be826ecae3f515b4a2e39f2ee8e248
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 36
         echo "</tbody>
 </table>
 </div>
@@ -149,7 +154,7 @@ class __TwigTemplate_7e4ac443606a5ebd20396cc1ec3b3be826ecae3f515b4a2e39f2ee8e248
 
     public function getDebugInfo()
     {
-        return array (  130 => 34,  121 => 31,  117 => 30,  113 => 29,  109 => 28,  105 => 27,  101 => 26,  97 => 25,  93 => 24,  89 => 23,  85 => 22,  82 => 21,  78 => 20,  59 => 3,  52 => 2,  35 => 1,);
+        return array (  135 => 36,  126 => 33,  122 => 32,  118 => 31,  114 => 30,  110 => 29,  106 => 28,  102 => 27,  98 => 26,  94 => 25,  90 => 24,  86 => 23,  83 => 22,  79 => 21,  59 => 3,  52 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -160,6 +165,7 @@ class __TwigTemplate_7e4ac443606a5ebd20396cc1ec3b3be826ecae3f515b4a2e39f2ee8e248
  <table class=\"table table-striped\">
   <thead>
   <tr>
+    <th scope=\"col\">ID</th>
     <th scope=\"col\">Vorname</th>
     <th scope=\"col\">Nachname</th>
     <th scope=\"col\">Strasse</th>
@@ -175,6 +181,7 @@ class __TwigTemplate_7e4ac443606a5ebd20396cc1ec3b3be826ecae3f515b4a2e39f2ee8e248
  <tbody>
 {% for item in adresses %}
     <tr>    
+        <td>{{ item.getId() }}</td>
         <td>{{ item.getVorname() }}</td>
         <td>{{ item.getNachname() }}</td>
         <td>{{ item.getStrasse() }}</td>
