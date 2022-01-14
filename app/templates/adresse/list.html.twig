@@ -1,0 +1,38 @@
+ {% extends 'base.html.twig' %}
+ {% block body %}
+ <div class="table-responsive">
+ <table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Vorname</th>
+    <th scope="col">Nachname</th>
+    <th scope="col">Strasse</th>
+    <th scope="col">Hausnummer</th>
+    <th scope="col">Ort</th>
+    <th scope="col">PLZ</th>
+    <th scope="col">Telefonnummer</th>
+    <th scope="col">Email Adresse</th>
+    <th scope="col"></th>
+    <th scope="col"></th>
+  </tr>
+</thead>
+ <tbody>
+{% for item in adresses %}
+    <tr>    
+        <td>{{ item.getVorname() }}</td>
+        <td>{{ item.getNachname() }}</td>
+        <td>{{ item.getStrasse() }}</td>
+        <td>{{ item.getHausnummer() }}</td>
+        <td>{{ item.getOrt() }}</td>
+        <td>{{ item.getPlz() }}</td>
+        <td>{{ item.getTelefonnumer() }}</td>
+        <td>{{ item.getEmailAdresse() }}</td>
+        <td scope="row"><a href="/edit/{{ item.getId() }}"><b style="color: green;">Edit</b></a></td>
+        <td scope="row"><a href="/delete/{{ item.getId() }}"><b style="color: red;">Delete</b></a></td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+
+{% endblock %}
