@@ -19,22 +19,16 @@ use App\Controller\ManagerRegistry;
 
 class AdresseController extends AbstractController
 {
-   
- 
     #[Route('/list', name: 'adresse')]
     public function index(EntityManagerInterface $em): Response
     {
-
         $productRepository = $em->getRepository(Adresse::class);
         $adresses = $productRepository->findAll();
-
 
         return $this->render(
             'adresse/list.html.twig',[
                 'adresses' => $adresses
                 ]);
-        
-        
     }
 
     #[Route('/new', name: 'new')]
@@ -66,20 +60,14 @@ class AdresseController extends AbstractController
                 // $adress->setEmailAdresse($data["email_adresse"]);
                 // $adress->setTelefonnumer($data["Telefonnumer"]);
                 
-            
-            
                 $em->persist($data);
                 $em->flush();
-                return $this->redirect('/list');
-                
+                return $this->redirect('/list');  
             }
-            
             return $this->render('adresse/form.html.twig', [
             'user_form' => $form->createView()
             ]);
         }
-
-
 
         #[Route('/edit/{id}', name: 'edit')]
         public function edit(EntityManagerInterface $em, Request $request, String $id)
@@ -88,8 +76,6 @@ class AdresseController extends AbstractController
             $productRepository = $em->getRepository(Adresse::class);
             $adress = $productRepository->find($id);
                 
-
-
                 $form = $this->createFormBuilder($adress)
                 ->add('Vorname')
                 ->add('Nachname')
@@ -116,12 +102,9 @@ class AdresseController extends AbstractController
                 ]);
             }
 
-
-
         #[Route('/delete/{id}', name: 'delete')]
         public function delete(EntityManagerInterface $em, Request $request, String $id)
-        {
-            
+        {          
             $productRepository = $em->getRepository(Adresse::class);
             $adress = $productRepository->find($id);
 
